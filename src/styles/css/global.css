@@ -1,0 +1,25 @@
+@import './reset.css';
+@import './nprogress.css';
+@import './transition.css';
+@import './icons.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+::before,
+::after {
+  /*覆盖@tailwind base;中样式*/
+  /* box-sizing: content-box; */
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+html {
+  overflow-x: hidden;
+}

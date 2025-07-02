@@ -1,0 +1,115 @@
+@import './variables.module.less';
+
+@SearchBoxHeight: 56px;
+@SearchMoreBoxHeight: 20px;
+@FlowCardGap: 12px;
+@SiderWidth: 330px;
+
+.flow-approve-box {
+  width: 100%;
+  height: calc(100vh - @AppHeaderHeight - @AppBreadcrumbHeight - 20px);
+  overflow: hidden;
+  //padding: 0 @LayoutGap;
+  display: flex;
+  gap: @LayoutGap;
+
+  .flow-content {
+    width: @SiderWidth;
+    min-width: @SiderWidth;
+    height: calc(100%);
+    overflow: hidden;
+    background: #fff;
+    border-radius: @BorderRadius;
+  }
+
+  .search-box {
+    display: flex;
+    align-items: center;
+    height: @SearchBoxHeight;
+    padding: 0 @GapSmall;
+
+    .search-segment + .search-segment {
+      margin-left: 4px;
+    }
+
+    .n-button {
+      padding: 0;
+      width: 32px;
+    }
+  }
+
+  .flow-list-box {
+    background-color: #fff;
+    padding: 0 @GapSmall;
+    height: calc(100vh - @AppHeaderHeight - @AppBreadcrumbHeight - @SearchBoxHeight - 20px);
+    overflow: hidden auto;
+    scroll-snap-type: y mandatory;
+    will-change: scroll-position;
+
+    .empty-box {
+      background-color: #fff;
+      padding: 0 @GapSmall;
+      padding-top: 20%;
+    }
+
+    .item-box {
+      margin-bottom: @FlowCardGap;
+    }
+
+    .item-box-choosed {
+      .flow-card-box {
+        border-color: @primaryColorHover;
+      }
+    }
+  }
+
+  .flow-detail-content {
+    height: calc(100%);
+    overflow: hidden;
+    background: #fff;
+    border-radius: @BorderRadius;
+    flex: auto;
+  }
+}
+
+.search-more-title {
+  color: var(--color-text-1);
+  font-size: 15px;
+  padding: 10px 16px;
+  user-select: none;
+  border-bottom: 1px solid #e5e6eb;
+}
+
+// 更多检索弹出框
+.flow-search-more-popover {
+  @BlockGap: 12px;
+
+  .search-more-title {
+    color: var(--color-text-1);
+    font-size: 15px;
+    padding: 10px 16px;
+    user-select: none;
+    border-bottom: 1px solid #e5e6eb;
+  }
+
+  .search-more-box {
+    margin-top: @BlockGap;
+    transition: all 0.3s;
+    display: grid;
+    width: 280px;
+    grid-template-columns: repeat(auto-fill);
+    gap: 12px;
+    padding: 0 16px;
+  }
+
+  .search-more-action {
+    padding: @BlockGap 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    button + button {
+      margin-left: 10px;
+    }
+  }
+}

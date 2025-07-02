@@ -1,0 +1,19 @@
+{
+  "name": "@yuencode/materials",
+  "version": "1.0.0",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "typesVersions": {
+    "*": {
+      "*": ["./src/*"]
+    }
+  },
+  "dependencies": {
+    "@yuencode/utils": "workspace:*",
+    "simplebar-vue": "2.3.4"
+  },
+  "devDependencies": {
+    "typed-css-modules": "0.9.1"
+  }
+}

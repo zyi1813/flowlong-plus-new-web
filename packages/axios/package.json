@@ -1,0 +1,21 @@
+{
+  "name": "@yuencode/axios",
+  "version": "1.0.0",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "typesVersions": {
+    "*": {
+      "*": ["./src/*"]
+    }
+  },
+  "dependencies": {
+    "@yuencode/utils": "workspace:*",
+    "axios": "1.7.2",
+    "axios-retry": "4.3.0",
+    "qs": "6.12.1"
+  },
+  "devDependencies": {
+    "@types/qs": "6.9.15"
+  }
+}
